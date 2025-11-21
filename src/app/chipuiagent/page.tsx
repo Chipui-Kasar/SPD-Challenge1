@@ -99,7 +99,8 @@ export default function GeminiPage() {
           <div>
             <h2 className="text-lg font-medium">Response</h2>
             <pre className="whitespace-pre-wrap bg-gray-10 p-3 rounded mt-2">
-              {output ?? "No response yet"}
+              {output?.replace(/\bgemini\b/gi, "Chipui's Agent") ??
+                "No response yet"}
             </pre>
           </div>
         </div>
